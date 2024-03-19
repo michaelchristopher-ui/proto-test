@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package pb;
+
+option go_package = "proto/sample/pb";
+
+message ExampleFuncRequest {
+  string example_request_string = 1;
+}
+
+message ExampleFuncResponse {
+  string example_response_string = 1;
+}
+
+service Example {
+  rpc ExampleFunc(ExampleFuncRequest) returns (ExampleFuncResponse) {}
+}
+
